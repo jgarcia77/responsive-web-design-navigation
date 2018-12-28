@@ -19,7 +19,45 @@ header {
 
 
 /* NAVigation  */
+nav {
+	background-color: $menuColor;
 
+	ul li a{
+		display: block;
+		color: #fff;
+		text-decoration: none;
+		width: 100%;
+		padding: .6rem 2%;
+		border-bottom: solid 1px rgba(0,0,0,0.3);
+	}
+	ul li ul li a{padding-left:8%;}
+	ul li.active > a {background-color: black;}
+
+	button {
+		font-size: 1.5rem;
+		color: #fff;
+		background-color: rgba(0,0,0,0.2);
+		border: solid 1px rgba(0,0,0,0.3);
+		width: 3.5rem;
+		margin: 3px 2%;
+		border-radius: 5px;
+	}
+
+	ul {
+		overflow: hidden;
+		transition: max-height 0.5s;
+		-webkit-transition: max-height 0.5s;
+		-moz-transition: max-height 0.5s;
+	}
+
+	ul.closed {
+		max-height: 0;
+	}
+
+	ul.open {
+		max-height: 31rem;
+	}
+}
 
 
 
