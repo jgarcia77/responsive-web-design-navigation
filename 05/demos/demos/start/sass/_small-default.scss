@@ -8,18 +8,28 @@ html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
 body {
 	font-family: $defaultFont;
 	font-size: 16px;
+	display: grid;
+	grid-template-rows: auto;
+	grid-template-areas: 
+		"myNavigation"
+		"myHeader"
+		"myContent"
+		"myFooter";
 }
 
 
 /* HEADER  */
 header {
+	grid-area: myHeader;
 	h1 {display: none;}
 	img {padding: 1rem 0 .5rem 2%; display: block;}
+
 } // end header
 
 
 /* NAVigation  */
 nav {
+	grid-area: myNavigation;
 	background-color: $menuColor;
 
 	ul li a{
@@ -78,6 +88,7 @@ nav {
 
 /* MAIN  */
 main {
+	grid-area: myContent;
 	padding: 1rem 0;
 	h1 {font-size: 2.5rem; color: $secondaryColor; padding-left: 2%;}
 	figure.w100 img {width: 100%;}
@@ -97,6 +108,7 @@ main {
 
 /* FOOTER  */
 footer {
+	grid-area: myFooter;
 	color: $primaryColor;
 	padding: 2rem 0;
 	text-align: center;
